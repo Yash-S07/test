@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Member Profile</title>
+<style>
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #262626;
+  color: #fff;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+.content {
+  padding: 20px;
+}
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+.profile-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.profile-edit {
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-label {
+  font-weight: bold;
+}
+.form-input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.form-select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  appearance: none;
+}
+.form-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">IndiGo</div>
+  <div class="nav-links">
+    <a href="#" class="nav-link">Book</a>
+    <a href="#" class="nav-link">Checkin</a>
+    <a href="#" class="nav-link">Manage</a>
+    <a href="#" class="nav-link">6E Rewards</a>
+    <a href="#" class="nav-link">Info</a>
+  </div>
+</div>
+<div class="content">
+  <h1>My Account & Settings</h1>
+  <div class="profile">
+    <div class="profile-info">
+      <h2>Welcome, Mukesh Ambani</h2>
+      <p>
+        <label>
+          <input type="radio" name="title" value="Mr."> Mr.
+        </label>
+        <label>
+          <input type="radio" name="title" value="Ms." checked> Ms.
+        </label>
+        <label>
+          <input type="radio" name="title" value="Mrs."> Mrs.
+        </label>
+      </p>
+      <div class="form-group">
+        <label class="form-label">First Name</label>
+        <input type="text" class="form-input" value="Mukesh">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Last Name</label>
+        <input type="text" class="form-input" value="Ambani">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Date of birth</label>
+        <input type="date" class="form-input" value="1995-08-30">
+      </div>
+    </div>
+    <button class="profile-edit">Edit Profile</button>
+  </div>
+  <div class="form">
+    <div class="form-group">
+      <label class="form-label">Street Address 1</label>
+      <input type="text" class="form-input">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Street Address 2</label>
+      <input type="text" class="form-input">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Please select the state</label>
+      <select class="form-select">
+        <option value="">Select a state</option>
+        <option value="state1">State 1</option>
+        <option value="state2">State 2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Town/City</label>
+      <input type="text" class="form-input">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Please select the country</label>
+      <select class="form-select">
+        <option value="">Select a country</option>
+        <option value="country1">Country 1</option>
+        <option value="country2">Country 2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Zip Code</label>
+      <input type="text" class="form-input">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Passenger Mobile Number</label>
+      <input type="text" class="form-input" value="8529819369">
+    </div>
+    <button class="form-button">Save</button>
+  </div>
+</div>
+</body>
+</html>
