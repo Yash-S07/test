@@ -1,0 +1,459 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyline Airlines - Contact Us</title>
+    <!-- <link rel="stylesheet" href="{% static 'contact/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  rel="stylesheet" /> -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        header {
+            background-color: #fff;
+            padding:4px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            float: left;
+            font-size: 27px;
+            font-weight: bold;
+            color:black;
+            text-decoration:solid;
+        }
+
+        .logo {
+            position: relative;
+            left: -125px; /* Adjust the value as needed */
+        }
+
+
+        nav ul {
+            float: right;
+            list-style: none;
+            margin: 0;
+            padding: 8px;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+            right: -100px;
+        }
+
+        nav a.active {
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        /* Hero Section */
+        .hero {
+            /* background-image: linear-gradient(to right, #3990ec, #1673d5); */
+            background-image: "{%url 'contact_us_image' %}";
+            background-size: contain;
+            /* color: #fff; */
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: black;
+            text-decoration: solid;
+            text-align: center;
+        }
+
+        .hero p
+        {
+            color: black;
+        }
+
+        .hero button {
+            background-color: white;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Contact Information */
+        .contact-info {
+            padding: 70px 0;
+        }
+
+        .contact-info .contact_info
+        {
+            column-count: 3;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .contact-info .info-item {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info
+        {
+            /* background-image: "{% url }" */
+            background-size: 100vmax;
+            color: black;
+        }
+
+        .contact-info h2
+        {
+            margin-top: -80px;
+            text-align: center;
+        }
+
+        .contact-info i {
+            font-size: 32px;
+            color: rgb(247, 247, 247);
+            margin-bottom: 10px;
+        }
+
+        .social-media
+        {
+            background-color: black;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            padding: 40px 0;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .contact-form button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .contact-form
+        {
+            background-color: rgba(241, 229, 209, 0.579);
+        }
+
+        /* Social Media */
+        .social-media {
+            padding: 40px 0;
+            background-color: #f7f7f7;
+        }
+
+        .social-media h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .social-media ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-media li {
+            margin-right: 20px;
+            align-items: center;
+        }
+
+        .social-media a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #007bff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+
+
+        .rating_text
+        {
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        .rating_class
+        {
+            background-color: rgba(241, 229, 209, 0.579);
+        }
+
+        .rating {
+            direction: rtl;
+            unicode-bidi: bidi-override;
+            font-size: 3em;
+            display: inline-flex;
+            font-weight: bolder;
+            position: relative;
+            margin-left: 520px;
+            margin-top: 5px;
+        }
+
+        .rating > input {
+            display: none;
+        }
+
+        .rating > label {
+            color: white;
+            font-weight: bolder;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        .rating > label:hover,
+        .rating > label:hover ~ label,
+        .rating > input:checked ~ label {
+            color: gold;
+        }
+
+        #thank-you-message,
+        #improve-message ,
+        #delighted{
+            display: none;
+            margin-top: 10px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        #thank-you-message {
+            color: green;
+        }
+
+        #improve-message {
+            color: red;
+        }
+
+        #delighted{
+            color:darkgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="{% url 'index' %}" class="logo">SkyLine</a>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1><b>Contact Us</b></h1>
+                <p><b>Get in touch with us for any queries or assistance.</b></p>
+                <button class="btn">Send Us a Message</button>
+            </div>
+        </section>
+
+        <section class = "rating_class">
+            <h2 class = "rating_text">Enjoying the Website? Dont forget to rate us!!</h2>
+            <div class="rating">
+                <input type="radio" name="star" id="star1" value="5"><label for="star1">★</label>
+                <input type="radio" name="star" id="star2" value="4"><label for="star2">★</label>
+                <input type="radio" name="star" id="star3" value="3"><label for="star3">★</label>
+                <input type="radio" name="star" id="star4" value="2"><label for="star4">★</label>
+                <input type="radio" name="star" id="star5" value="1"><label for="star5">★</label>
+            </div>
+            <div id="thank-you-message">Thank you for your rating!</div>
+            <div id="improve-message">We are sorry to hear that. Please let us know how we can improve.</div>
+            <div id = "delighted"> We are Delighted to hear that.</div>
+        </section>
+
+        <section class="contact-form">
+            
+            <div class="container">
+                {% csrf_token %}
+                <h2>Send Us a Message</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+        </section>
+        <section class="contact-info">
+            <div class="container">
+                <h2>Contact Information</h2>
+                <div class = "contact_info">
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone</h3>
+                    <p>+1-800-555-1212</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@skyline.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>3/5 San Francisco, USA</p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <section>
+            <h2>Follow Us</h2>
+                <ul>
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </section>
+            <p>&copy; 2023 Skyline Airlines. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+
+            const response = await fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': formData.get('csrfmiddlewaretoken'),
+                },
+                body: formData,
+            });
+
+            const messageDiv = document.getElementById('message');
+
+            if (response.ok) {
+                const data = await response.json();
+                messageDiv.textContent = data.message;
+                messageDiv.className = 'alert alert-success';
+                form.reset();
+            } else {
+                const errorData = await response.json();
+                messageDiv.textContent = 'Error: ' + JSON.stringify(errorData.errors);
+                messageDiv.className = 'alert alert-danger';
+            }
+        });
+
+
+
+        document.querySelectorAll('.rating input').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const rating = parseInt(radio.value);
+                // alert("rating is " + rating)
+                if (rating == 5) 
+                {
+                    document.getElementById('improve-message').style.display = 'none';
+                    document.getElementById('thank-you-message').style.display = 'none';
+                    document.getElementById('delighted').style.display = 'block';
+                } 
+                else if (rating < 3) 
+                {
+                    document.getElementById('thank-you-message').style.display = 'none';
+                    document.getElementById('improve-message').style.display = 'block';
+                    document.getElementById('delighted').style.display = 'none';
+                } 
+                else 
+                {
+                    document.getElementById('improve-message').style.display = 'none';
+                    document.getElementById('thank-you-message').style.display = 'block';
+                    document.getElementById('delighted').style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

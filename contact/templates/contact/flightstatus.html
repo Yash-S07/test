@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Check Flight Status</h1>
+  <p>With IndiGo's flight tracker, you can now track the live status of domestic and international flights. Just enter a few details such as PNR number, flight number, travel date and others and get the flight status on the go from anywhere.</p>
+
+  <p>Enter flight details to check your flight status.</p>
+
+  <div>
+    <label for="departing">Departing</label>
+    <input type="text" id="departing" name="departing">
+  </div>
+
+  <div>
+    <label for="arriving">Arriving</label>
+    <input type="text" id="arriving" name="arriving">
+  </div>
+
+  <div class="form-group">
+    <label for="travel-dates">Travel Dates</label>
+    <input type="date" id="travel-dates" class="form-control">
+</div>
+
+  <div>
+    <label for="pnr">PNR/Booking Ref.</label>
+    <input type="text" id="pnr" name="pnr">
+  </div>
+
+  <button type="submit">Search Flight</button>
+</div>
+
+</body>
+</html>
